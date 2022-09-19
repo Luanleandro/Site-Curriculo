@@ -1,0 +1,83 @@
+.cursos {
+  grid-template-columns: 1fr;
+  padding: 80px 20px 40px 20px;
+  align-items: center;
+  justify-content: center;
+  background: #141414;
+  gap: 80px;
+  position: relative;
+}
+
+.cursos .subtitulo {
+  text-align: center;
+  word-break: normal;
+  max-width: initial;
+  color: #8f8f8f;
+}
+
+.cursos-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-bottom: 60px;
+  padding-top: 40px;
+  border-bottom: 3px solid #292929;
+  gap: 40px;
+}
+
+.cursos-card {
+  display: grid;
+  gap: 30px;
+  padding: 20px;
+  background: #000;
+  position: relative;
+}
+
+.cursos-card-titulo {
+  color: #a3a3a3;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cursos-card-curso {
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.cursos-card-curso::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 3px;
+  height: 16px;
+  top: 70px;
+  left: 10px;
+  background: linear-gradient(#74c3dc, #126bd4);
+}
+
+@media (max-width: 1150px) {
+  .cursos-card-curso::before {
+    top: 78px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cursos-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cursos-card-curso::before {
+    width: 3px;
+    height: 16px;
+    top: 70px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cursos-container {
+    grid-template-columns: 1fr;
+  }
+}
